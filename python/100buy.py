@@ -13,6 +13,5 @@
 for i in range(1, 21):
     for j in range(1, 34):
         k = 100 - i - j
-        # 总金额为100，鸡雏必须为3的倍数
         if (i*5 + j*3 + k/3) == 100 and k % 3 == 0:
-            print("鸡翁: {} 鸡母: {} 鸡雏: {}".format(i, j, k))
+            print('鸡翁: {} 鸡母: {} 鸡雏: {}'.format(i, j, k))

@@ -22,4 +22,4 @@ for i in range(100, 1000):
     hundreds = int(i / 100) % 10
     # 3次幂之和等于它本身，python中幂使用 **
     if (units ** 3 + tens ** 3 + hundreds ** 3) == i:
-        print("{} 是水仙花数".format(i))
+        print('{} 是水仙花数'.format(i))

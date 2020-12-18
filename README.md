@@ -2,6 +2,18 @@
 
 ## 九九乘法表
 
+九九乘法表是中国古代筹算中进行乘法、除法、开方等运算的基本计算规则，沿用至今已有两千多年。在《荀子》、《管子》、《淮南子》、《战国策》等书中就能找到“三九二十七”、“六八四十八”、“四八三十二”、“六六三十六”等句子。
+
+代码：
+```python
+for i in range(1, 10):
+    for j in range(1, i+1):
+        print('{}x{}={}'.format(j, i, j*i), end=' ')
+    print()
+```
+示例: [点我查看python代码](python/99mult.py "九九乘法表")
+
+***
 
 ## 闰年
 
@@ -18,33 +30,32 @@
 注意闰年（公历中名词）和闰月（农历中名词）并没有直接的关联，公历中只分闰年和平年，平年有365天，而闰年有366天（2月中多一天）；平年中也可能有闰月（如2017年是平年，农历有闰月，闰6月）。
 
 代码：
-
 ```python
 for year in range(1700, 2022):
     if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
-        print("{} 是闰年".format(year))
+        print('{} 是闰年'.format(year))
     else:
-        print("{} 是平年".format(year))
+        print('{} 是平年'.format(year))
 ```
-
 示例: [点我查看python代码](python/leapyear.py "闰年")
+
+***
 
 ## 百鸡百钱
 
 我国古代数学家张丘建在《算经》一书中提出的数学问题：鸡翁一值钱五，鸡母一值钱三，鸡雏三值钱一。百钱买百鸡，问鸡翁、鸡母、鸡雏各几何？
 
 代码：
-
 ```python
 for i in range(1, 21):
     for j in range(1, 34):
         k = 100 - i - j
-        # 总金额为100，鸡雏必须为3的倍数
         if (i*5 + j*3 + k/3) == 100 and k % 3 == 0:
-            print("鸡翁: {} 鸡母: {} 鸡雏: {}".format(i, j, k))
+            print('鸡翁: {} 鸡母: {} 鸡雏: {}'.format(i, j, k))
 ```
-
 示例: [点我查看python代码](python/100buy.py "百鸡百钱")
+
+***
 
 ## 八皇后
 
@@ -52,17 +63,21 @@ for i in range(1, 21):
 
 示例: [点我查看python代码](python/eightqueens.py "八皇后")
 
+***
 
 ## 贪吃蛇
 
+***
+
 ## 汉诺塔
+
+***
 
 ## 水仙花数
 
 水仙花数（Narcissistic number）也被称为超完全数字不变数（pluperfect digital invariant, PPDI）、自恋数、自幂数、阿姆斯壮数或阿姆斯特朗数（Armstrong number），水仙花数是指一个 3 位数，它的每个位上的数字的 3次幂之和等于它本身（例如：1^3 + 5^3+ 3^3 = 153）。
 
 代码:
-
 ```python
 for i in range(100, 1000):
     # 个位
@@ -73,16 +88,31 @@ for i in range(100, 1000):
     hundreds = int(i / 100) % 10
     # 3次幂之和等于它本身，python中幂使用 **
     if (units ** 3 + tens ** 3 + hundreds ** 3) == i:
-        print("{} 是水仙花数".format(i))
+        print('{} 是水仙花数'.format(i))
 ```
-
-
 示例: [点我查看python代码](python/narcissisticnumber.py "水仙花数")
+
+***
 
 ## 斐波那契数列
 
 斐波那契数列又因数学家莱昂纳多·斐波那契以兔子繁殖为例子而引入，故又称为“兔子数列”。
 一般而言，兔子在出生两个月后，就有繁殖能力，一对兔子每个月能生出一对小兔子来。如果所有兔子都不死，那么一年以后可以繁殖多少对兔子？
+
+代码:
+```python
+def fibonacci(n):
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a+b
+    print()
+
+fibonacci(1000)
+```
+示例: [点我查看python代码](python/fibonacci.py "斐波那契数列")
+
+***
 
 ## 冒泡排序
 
@@ -98,7 +128,6 @@ for i in range(100, 1000):
 4. 重复步骤1~3，直到排序完成
 
 代码：
-
 ```python
 arr = [3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48]
 
@@ -106,11 +135,12 @@ for i in range(len(arr), 0, -1):
     for j in range(0, i-1):
         if arr[j] > arr[j+1]:
             arr[j], arr[j+1] = arr[j+1], arr[j]
-    print("第 {} 次,结果: {}".format(len(arr) - i + 1, arr))
 
-print("排序后结果: {}".format(arr))
-
+print('排序后结果: {}'.format(arr))
 ```
+示例: [点我查看python代码](python/bubblesort.py "冒泡排序")
+
+***
 
 ## 快速排序
 
@@ -122,6 +152,7 @@ print("排序后结果: {}".format(arr))
 2. 重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作
 3. 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序
 
+代码：
 ```python
 arr = [3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48]
 
@@ -141,17 +172,17 @@ def quick_sort(arr, low, high):
                 low = low + 1
 
             arr[high] = arr[low]
-
             arr[low] = pivot
 
         quick_sort(arr, low1, low)
         quick_sort(arr, low + 1, high1)
 
-
 quick_sort(arr, 0, len(arr) - 1)
-
-print("排序后结果: {}".format(arr))
+print('排序后结果: {}'.format(arr))
 ```
+示例: [点我查看python代码](python/quicksort.py "快速排序")
+
+***
 
 ## 插入排序
 

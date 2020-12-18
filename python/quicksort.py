@@ -28,13 +28,10 @@ def quick_sort(arr, low, high):
                 low = low + 1
 
             arr[high] = arr[low]
-
             arr[low] = pivot
 
         quick_sort(arr, low1, low)
         quick_sort(arr, low + 1, high1)
 
-
 quick_sort(arr, 0, len(arr) - 1)
-
-print("排序后结果: {}".format(arr))
+print('排序后结果: {}'.format(arr))

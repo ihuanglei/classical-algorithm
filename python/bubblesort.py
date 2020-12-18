@@ -10,6 +10,5 @@ for i in range(len(arr), 0, -1):
     for j in range(0, i-1):
         if arr[j] > arr[j+1]:
             arr[j], arr[j+1] = arr[j+1], arr[j]
-    print("第 {} 次,结果: {}".format(len(arr) - i + 1, arr))
 
-print("排序后结果: {}".format(arr))
+print('排序后结果: {}'.format(arr))
