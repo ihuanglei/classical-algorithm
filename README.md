@@ -11,7 +11,7 @@ for i in range(1, 10):
         print('{}x{}={}'.format(j, i, j*i), end=' ')
     print()
 ```
-示例: [点我查看python代码](python/99mult.py "九九乘法表")
+示例: [点我查看python代码](python/algorithm/99mult.py "九九乘法表")
 
 ***
 
@@ -37,7 +37,7 @@ for year in range(1700, 2022):
     else:
         print('{} 是平年'.format(year))
 ```
-示例: [点我查看python代码](python/leapyear.py "闰年")
+示例: [点我查看python代码](python/algorithm/leapyear.py "闰年")
 
 ***
 
@@ -53,7 +53,7 @@ for i in range(1, 21):
         if (i*5 + j*3 + k/3) == 100 and k % 3 == 0:
             print('鸡翁: {} 鸡母: {} 鸡雏: {}'.format(i, j, k))
 ```
-示例: [点我查看python代码](python/100buy.py "百鸡百钱")
+示例: [点我查看python代码](python/algorithm/100buy.py "百鸡百钱")
 
 ***
 
@@ -61,11 +61,7 @@ for i in range(1, 21):
 
 在8×8格的国际象棋上摆放8个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法。
 
-示例: [点我查看python代码](python/eightqueens.py "八皇后")
-
-***
-
-## 贪吃蛇
+示例: [点我查看python代码](python/algorithm/eightqueens.py "八皇后")
 
 ***
 
@@ -86,7 +82,7 @@ def move(n, a, b, c):
 
 move(3, 'A', 'B', 'C')
 ```
-示例: [点我查看python代码](python/hanoi.py "汉诺塔")
+示例: [点我查看python代码](python/algorithm/hanoi.py "汉诺塔")
 
 ***
 
@@ -107,7 +103,7 @@ for i in range(100, 1000):
     if (units ** 3 + tens ** 3 + hundreds ** 3) == i:
         print('{} 是水仙花数'.format(i))
 ```
-示例: [点我查看python代码](python/narcissisticnumber.py "水仙花数")
+示例: [点我查看python代码](python/algorithm/narcissisticnumber.py "水仙花数")
 
 ***
 
@@ -127,7 +123,7 @@ def fibonacci(n):
 
 fibonacci(12)
 ```
-示例: [点我查看python代码](python/fibonacci.py "斐波那契数列")
+示例: [点我查看python代码](python/algorithm/fibonacci.py "斐波那契数列")
 
 ***
 
@@ -155,7 +151,7 @@ for i in range(len(arr), 0, -1):
 
 print('排序后结果: {}'.format(arr))
 ```
-示例: [点我查看python代码](python/bubblesort.py "冒泡排序")
+示例: [点我查看python代码](python/algorithm/bubblesort.py "冒泡排序")
 
 ***
 
@@ -197,16 +193,10 @@ def quick_sort(arr, low, high):
 quick_sort(arr, 0, len(arr) - 1)
 print('排序后结果: {}'.format(arr))
 ```
-示例: [点我查看python代码](python/quicksort.py "快速排序")
+示例: [点我查看python代码](python/algorithm/quicksort.py "快速排序")
 
 ***
 
-## 插入排序
+## A Star
 
-## 希尔排序
-
-## 归并排序
-
-## 堆排序
-
-## 基数排序
+***
