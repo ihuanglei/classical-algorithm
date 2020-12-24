@@ -9,4 +9,4 @@ def fibonacci(n):
         a, b = b, a+b
     print()
 
-fibonacci(1000)
+fibonacci(12)

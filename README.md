@@ -125,7 +125,7 @@ def fibonacci(n):
         a, b = b, a+b
     print()
 
-fibonacci(1000)
+fibonacci(12)
 ```
 示例: [点我查看python代码](python/fibonacci.py "斐波那契数列")
 
